@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Online - Store</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header>
+        <div class="slogan">Shop Online - Anytime, Anywhere</div>
+        <div class="options">
+            <div class="cart">Shopping Cart</div>
+            <div class="logout" onclick="logout()">Logout</div>
+        </div>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search products...">
+            <button onclick="search()">Search</button>
+        </div>
+        <h2 class="products-title">Products</h2>
+        <div class="categories">
+            <div class="category">Electronics</div>
+            <div class="category">Jewelery</div>
+            <div class="category">Men's Clothing</div>
+            <div class="category">Women's Clothing</div>
+        </div>
+        <div class="product-list" id="product-list">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </main>
+    <script src="shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header>
+        <div class="slogan">Shopping Cart</div>
+        <div class="options">
+            <div class="logout" onclick="logout()">Logout</div>
+        </div>
+    </header>
+    <main>
+        <h2 class="products-title">Your Cart</h2>
+        <div class="product-list" id="cart-list">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartList = document.getElementById('cart-list');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'product-card';
+                cartItem.innerHTML = `
+                    <h3>${item.title}</h3>
+                    <p>Price: $${item.price}</p>
+                    <p>Date Added: ${item.date}</p>
+                `;
+                cartList.appendChild(cartItem);
+            });
+        });
+
+        function logout() {
+            window.location.href = 'index.html'; // Redirect to the login page
+        }
+    </script>
+</body>
+</html>
