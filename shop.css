@@ -12,9 +12,16 @@ header {
     background-color: #28a745;
     color: #fff;
 }
-.slogan {
-    font-size: 1.2em;
+.slogan a {
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
 }
+
+.slogan a:hover {
+    text-decoration: none;
+}
+
 .options {
     display: flex;
     gap: 20px;
@@ -113,4 +120,46 @@ main {
 }
 .product-card button:hover {
     background-color: #218838;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    width: 80%; /* Ajusta el ancho según tus necesidades */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+    color: #333;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+}
+
+tr:nth-child(even) td {
+    background-color: #f0f0f0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #0056b3;
 }
