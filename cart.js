@@ -4,24 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cartTableBody = document.querySelector('#cart-table tbody');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const productCounts = {};
+
     cart.forEach(item => {
+        if (!productCounts[item.id]) {
+            productCounts[item.id] = { ...item, count: 0 };
+        }
+        productCounts[item.id].count += 1;
+        productCounts[item.id].date = item.date; // Update to the latest date
+    });
+
+    Object.values(productCounts).forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${item.id}</td>
+            <td>${item.count}</td>
             <td>${item.date}</td>
             <td>
-                <a href="#" onclick="viewProduct(${item.id})">Ver</a> | 
+                <a href="sumary.html?id=${item.id}">Ver</a> | 
                 <a href="#" onclick="removeFromCart(${item.id})">Eliminar</a>
             </td>
         `;
         cartTableBody.appendChild(row);
     });
 });
-
-function viewProduct(productId) {
-    alert(`Viewing product ${productId}`);
-    // Add logic to view product details
-}
 
 function removeFromCart(productId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];

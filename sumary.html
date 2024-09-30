@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Cart Summary</title>
     <link rel="stylesheet" href="shop.css">
 </head>
 <body>
@@ -16,20 +16,29 @@
         </div>
     </header>
     <main>
-        <h2 class="products-title">Your Cart</h2>
-        <table id="cart-table">
+        <h2 class="products-title">Cart Summary</h2>
+        <table id="summary-table">
             <thead>
                 <tr>
+                    <th>Producto</th>
+                    <th>Precio Unitario</th>
                     <th>Cantidad</th>
-                    <th>Fecha de Solicitud</th>
-                    <th>Acciones</th>
+                    <th>Subtotal</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Cart items will be dynamically inserted here -->
+                <!-- Summary items will be dynamically inserted here -->
             </tbody>
         </table>
+        <div class="total-container">
+            <p>Total: $<span id="total-price">0.00</span></p>
+        </div>
+        <div class="actions">
+            <button onclick="updateSummary()">Actualizar</button>
+            <button onclick="confirmPurchase()">Confirmar</button>
+            <button onclick="continueShopping()">Seguir Comprando</button>
+        </div>
     </main>
-    <script src="cart.js"></script>
+    <script src="sumary.js"></script>
 </body>
 </html>

@@ -64,18 +64,21 @@ main {
 .categories {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Cambiado de wrap a nowrap */
+    gap: 10px; /* Añadido para espacio entre categorías */
 }
+
 .category {
     background-color: #fff;
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(25% - 40px);
+    flex: 0 1 auto; /* Ajustado para que las categorías no se expandan */
     text-align: center;
     cursor: pointer;
 }
+
 .category:hover {
     background-color: #f8f8f8;
 }
