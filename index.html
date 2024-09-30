@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Online - Login</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="login-container">
         <h1>Shop Online</h1>
         <p>Anytime, Anywhere</p>
+        <label for="username">Username</label>
         <input type="text" id="username" placeholder="Username">
+        <label for="password">Password</label>
         <input type="password" id="password" placeholder="Password">
         <button onclick="login()">Login</button>
-        <div class="register">Register</div>
+        <button class="register" onclick="register()">Register</button>
     </div>
     <script src="index.js"></script>
 </body>
