@@ -35,7 +35,7 @@ function setupCategoryLinks() {
     const categories = document.querySelectorAll('.category');
     categories.forEach(category => {
         category.addEventListener('click', () => {
-            let categoryName = category.textContent.toLowerCase().replace("'", "").replace(" ", "-");
+            let categoryName = category.textContent.toLowerCase();
             if (categoryName === "jewelry") {
                 categoryName = "jewelery"; // Adjust the category name for the API
             }
