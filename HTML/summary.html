@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="../CSS/summary.css">
+</head>
+<body>
+    <header>
+        <div class="slogan"><a href="shop.html">Shop Online - Anytime, Anywhere</a></div>
+        <div class="options">
+            <div class="welcome">Welcome: <span id="username"></span></div>
+            <div class="cart">Shopping Cart</div>
+            <div class="logout" onclick="logout()">Logout</div>
+        </div>
+    </header>
+    <main>
+        <h2 class="products-title">Cart Summary</h2>
+        <table id="cart-details-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart details will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <h3 id="grand-total">Grand Total: $0.00</h3>
+        <button id="recalculate-button">Recalculate Total</button>
+        <button id="checkout-button">Checkout</button>
+    </main>
+    <script src="../JS/summary.js"></script>
+</body>
+</html>
